@@ -40,7 +40,7 @@ def get_sales_data():
 def validate_data(values):
     """
     Inside the try, converts all string values into integers.
-    Raises ValueError if strings cannot be converted into int, 
+    Raises ValueError if strings cannot be converted into int,
     or if there aren't exactly 6 values.
     """
     print(values)
@@ -93,13 +93,13 @@ def get_last_5_entries_sales():
     the last 5 entries for each sandwich and returns the data
     as a list of lists.
     """
-    sales = SHEET.worksheet('sales')    
+    sales = SHEET.worksheet('sales')
     columns = []
     for ind in range(1, 7):
         column = sales.col_values(ind)
         columns.append(column[-5:])
     return columns
-    
+
 
 def calculate_stock_data(data):
     """
